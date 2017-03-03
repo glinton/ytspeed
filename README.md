@@ -1,6 +1,7 @@
 ![ytspeed logo](./extension/icons/icon-256.png)  
 
-## ytSpeed is a simple chrome extension to adjust the playback speed of YouTube videos via keyboard shortcuts
+# ytSpeed
+A simple chrome extension to adjust the playback speed of YouTube videos via keyboard shortcuts
 
 ### Status
 Works For Me
@@ -11,6 +12,6 @@ Keybindings are as follows:
 >slower: "Alt+Z"  
 >normal: "Alt+A"  
 
-#### TODO
+#### todo
 * [ ] persist speed - maybe?
 * [ ] popup adjustments

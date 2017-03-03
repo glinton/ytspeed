@@ -1,0 +1,11 @@
+div {
+	color: #3d5d6a;
+	line-height: 2em;
+	white-space: nowrap;
+}
+
+.separator {
+	width: 100%;
+	border-top: 1px solid #ddd;
+	margin: 5px 0;
+}
