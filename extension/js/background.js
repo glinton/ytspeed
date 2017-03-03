@@ -1,3 +1,23 @@
+// When the extension is installed or upgraded ...
+chrome.runtime.onInstalled.addListener(function() {
+  // Replace all rules ...
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+    // With a new rule ...
+    chrome.declarativeContent.onPageChanged.addRules([
+      {
+        // That fires when a page's URL contains 'youtube.com/watch' ...
+        conditions: [
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlContains: 'youtube.com/watch' },
+          })
+        ],
+        // And shows the extension's page action.
+        actions: [ new chrome.declarativeContent.ShowPageAction() ]
+      }
+    ]);
+  });
+});
+
 // listen for keyboard initiated command event (content can't 'hear' them)
 chrome.commands.onCommand.addListener(function(command) {
 	// log all the things

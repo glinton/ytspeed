@@ -13,3 +13,4 @@ Keybindings are as follows:
 
 #### TODO
 * [ ] persist speed - maybe?
+* [ ] popup adjustments

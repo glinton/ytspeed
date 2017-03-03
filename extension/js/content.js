@@ -3,9 +3,9 @@ var speed = 1
 
 console.log("Initialized speed: " + speed);
 
-// Listen for messages from background
+// listen for messages from background
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-	// Adjust speed based on command
+	// adjust speed based on command
 	switch(msg.cmdName) {
 		case "normal":
 			speed = 1;
@@ -19,6 +19,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	}
 
 	console.log("Setting play speed: " + speed);
+	// the magic
 	document.getElementsByTagName("video")[0].playbackRate = speed;
 	sendResponse({done: "done"});
 });
