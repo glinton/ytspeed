@@ -1,0 +1,63 @@
+{
+	"manifest_version": 2,
+	"minimum_chrome_version": "26",
+	"name": "ytSpeed",
+	"description": "Provides keyboard control of YouTube playback speed (read: faster than 2x)",
+	"version": "0.0.0",
+	"homepage_url": "https://github.com/glinton/ytspeed",
+
+	"icons": {
+		"16": "icons/icon-16.png",
+		"32": "icons/icon-32.png",
+		"48": "icons/icon-96.png",
+		"64": "icons/icon-64.png",
+		"96": "icons/icon-96.png",
+		"128": "icons/icon-128.png",
+		"256": "icons/icon-256.png"
+	},
+
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"run_at": "document_start",
+			"all_frames": false,
+			"js": ["js/content.js"]
+		}
+	],
+
+	"page_action": {
+		"default_icon": "icons/icon-48.png",
+		"default_title": "ytspeed"
+	},
+
+	"commands": {
+		"faster" : {
+			"description": "Speed up playback (.5x)",
+			"suggested_key": {
+				"default": "Alt+X"
+			}
+		},
+		"slower" : {
+			"description": "Slow down playback (.5x)",
+			"suggested_key": {
+				"default": "Alt+Z"
+			}
+		},
+		"normal": {
+			"description": "Play at normal speed (1x)",
+			"suggested_key": {
+				"default": "Alt+A"
+			}
+		}
+	},
+
+	"permissions": [
+		"declarativeContent",
+		"*://*.youtube.com/watch*"
+	]
+}
