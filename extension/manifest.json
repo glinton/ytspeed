@@ -23,7 +23,7 @@
 
 	"content_scripts": [
 		{
-			"matches": ["*://*.youtube.com/*","*://*.facebook.com/","*://vimeo.com/*"],
+			"matches": ["<all_urls>"],
 			"run_at": "document_start",
 			"all_frames": false,
 			"js": ["js/content.js"]
@@ -59,8 +59,6 @@
 
 	"permissions": [
 		"declarativeContent",
-		"*://*.youtube.com/watch*",
-		"*://*.facebook.com/",
-		"*://vimeo.com/*"
+		"<all_urls>"
 	]
 }
