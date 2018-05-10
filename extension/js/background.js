@@ -9,6 +9,8 @@ chrome.runtime.onInstalled.addListener(function() {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlContains: 'youtube.com/watch' },
+            pageUrl: { urlContains: 'vimeo.com' },
+            pageUrl: { urlContains: 'facebook.com' },
           })
         ],
         // And shows the extension's page action.

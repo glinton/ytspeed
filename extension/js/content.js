@@ -20,6 +20,10 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
 	console.log("Setting play speed: " + speed);
 	// the magic
-	document.getElementsByTagName("video")[0].playbackRate = speed;
+	var vids = document.getElementsByTagName("video")
+	for (var i = 0; i < vids.length; i++) {
+		vids[i].playbackRate = speed;
+	}
+
 	sendResponse({done: "done"});
 });
