@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"minimum_chrome_version": "26",
 	"name": "ytSpeed",
-	"description": "Provides keyboard control of YouTube playback speed (read: faster than 2x)",
+	"description": "Originally designed for just YouTube, ytSpeed provides keyboard control of video playback speed.",
 	"version": "0.0.0",
 	"homepage_url": "https://github.com/glinton/ytspeed",
 
@@ -30,8 +30,7 @@
 		}
 	],
 
-	"page_action": {
-		"default_icon": "icons/icon-48.png",
+	"browser_action": {
 		"default_popup": "html/popup.html",
 		"default_title": "ytspeed"
 	},
