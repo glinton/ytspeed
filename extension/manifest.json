@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
-	"minimum_chrome_version": "26",
+	"minimum_chrome_version": "88",
 	"name": "ytSpeed",
-	"description": "Originally designed for just YouTube, ytSpeed provides keyboard control of video playback speed. Set key bindings here - chrome://extensions/shortcuts",
+	"description": "Originally designed for just YouTube, ytSpeed provides keyboard control of video playback speed.",
 	"version": "0.0.1",
 	"homepage_url": "https://github.com/glinton/ytspeed",
 
