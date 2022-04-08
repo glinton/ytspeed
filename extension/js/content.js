@@ -4,7 +4,9 @@ var speed = 1
 console.log("Initialized speed: " + speed);
 
 // listen for messages from background
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(runtimeCmd);
+
+function runtimeCmd(msg) {
 	// adjust speed based on command
 	switch(msg.cmdName) {
 		case "normal":
@@ -19,7 +21,9 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	}
 
 	console.log("Setting play speed: " + speed);
-	// the magic
-	document.getElementsByTagName("video")[0].playbackRate = speed;
-	sendResponse({done: "done"});
-});
+
+	var vids = document.getElementsByTagName("video")
+	for (var i = 0; i < vids.length; i++) {
+		vids[i].playbackRate = speed;
+	}
+}

@@ -1,9 +1,9 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"minimum_chrome_version": "26",
 	"name": "ytSpeed",
-	"description": "Provides keyboard control of YouTube playback speed (read: faster than 2x)",
-	"version": "0.0.0",
+	"description": "Originally designed for just YouTube, ytSpeed provides keyboard control of video playback speed. Set key bindings here - chrome://extensions/shortcuts",
+	"version": "0.0.1",
 	"homepage_url": "https://github.com/glinton/ytspeed",
 
 	"icons": {
@@ -17,48 +17,48 @@
 	},
 
 	"background": {
-		"scripts": ["js/background.js"],
-		"persistent": false
+		"service_worker": "js/background.js"
 	},
 
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": ["*://*/*"],
 			"run_at": "document_start",
 			"all_frames": false,
 			"js": ["js/content.js"]
 		}
 	],
 
-	"page_action": {
-		"default_icon": "icons/icon-48.png",
+	"action": {
 		"default_popup": "html/popup.html",
+		"default_icon": {
+			"16": "icons/icon-16.png",
+			"32": "icons/icon-32.png",
+			"48": "icons/icon-96.png",
+			"64": "icons/icon-64.png",
+			"96": "icons/icon-96.png",
+			"128": "icons/icon-128.png",
+			"256": "icons/icon-256.png"
+		},
 		"default_title": "ytspeed"
 	},
 
 	"commands": {
 		"faster" : {
 			"description": "Speed up playback (.5x)",
-			"suggested_key": {
-				"default": "Alt+X"
-			}
+			"suggested_key": "Alt+X"
 		},
 		"slower" : {
 			"description": "Slow down playback (.5x)",
-			"suggested_key": {
-				"default": "Alt+Z"
-			}
+			"suggested_key": "Alt+Z"
 		},
 		"normal": {
 			"description": "Play at normal speed (1x)",
-			"suggested_key": {
-				"default": "Alt+A"
-			}
+			"suggested_key": "Alt+A"
 		}
 	},
 
-	"permissions": [
-		"declarativeContent",
-		"*://*.youtube.com/watch*"
+	"host_permissions": [
+		"*://*/*"
 	]
 }
