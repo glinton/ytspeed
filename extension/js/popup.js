@@ -1,13 +1,13 @@
 function fast() {
-    runCmd("faster")
+	runCmd("faster")
 }
-                
+
 function slow() {
-    runCmd("faster")
+	runCmd("slower")
 }
 
 function norm() {
-    runCmd("normal")
+	runCmd("normal")
 }
 
 document.getElementById('fast').addEventListener('click', fast);
