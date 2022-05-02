@@ -8,6 +8,13 @@ Works For Me
 
 ### Usage
 Keybindings are as follows:
->faster: "Alt+X"  
->slower: "Alt+Z"  
->normal: "Alt+A"  
+>faster: "Alt+Shift+X"
+>slower: "Alt+Shift+Z"
+>normal: "Alt+A"
+
+Suggested keybindings are as follows:
+>faster: "Alt+X"
+>slower: "Alt+Z"
+>normal: "Alt+A"
+
+Configure keyboard shortcut as you wish by visiting: [chrome://extensions/shortcuts](chrome://extensions/shortcuts)
