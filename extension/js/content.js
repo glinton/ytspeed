@@ -13,10 +13,10 @@ function runtimeCmd(msg) {
 			speed = 1;
 			break;
 		case "slower":
-			speed -= .5;
+			speed -= .25;
 			break;
 		case "faster":
-			speed += .5;
+			speed += .25;
 			break;
 	}
 

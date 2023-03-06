@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"minimum_chrome_version": "88",
 	"name": "ytSpeed",
-	"description": "Originally designed for just YouTube, ytSpeed provides keyboard control of video playback speed.",
+	"description": "Originally designed for just YouTube, ytSpeed provides control of video playback speed.",
 	"version": "0.0.2",
 	"homepage_url": "https://github.com/glinton/ytspeed",
 
@@ -45,13 +45,13 @@
 
 	"commands": {
 		"faster" : {
-			"description": "Speed up playback (.5x)",
+			"description": "Speed up playback (.25x)",
 			"suggested_key": {
 				"default": "Alt+Shift+X"
 			}
 		},
 		"slower" : {
-			"description": "Slow down playback (.5x)",
+			"description": "Slow down playback (.25x)",
 			"suggested_key": {
 				"default": "Alt+Shift+Z"
 			}
